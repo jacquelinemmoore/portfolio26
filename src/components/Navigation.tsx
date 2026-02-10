@@ -58,32 +58,34 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 right-0 z-50 pl-8 pr-10 pt-8 pb-6">
-      <div ref={navRef} className="flex gap-8 relative">
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            ref={(el) => {
-                if(el !== null) {
-                    linkRefs.current[section.id] = el
-                }
-            }}
-            onClick={() => scrollToSection(section.id)}
-            className={`transition-colors relative pb-1 ${
-              activeSection === section.id ? 'text-stone-900' : 'text-stone-700 hover:text-stone-900'
-            }`}
-            style={section.id === 'samples' ? { } : {}}
-          >
-            {section.label}
-          </button>
-        ))}
-        <span 
-          className="absolute bottom-0 h-[1px] bg-stone-900 transition-all duration-300 ease-in-out"
-          style={{
-            left: `${underlineStyle.left}px`,
-            width: `${underlineStyle.width}px`
-          }}
-        />
+    <nav className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6">
+      <div className="flex flex-row-reverse">
+          <div ref={navRef} className="flex gap-8 relative">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                ref={(el) => {
+                    if(el !== null) {
+                        linkRefs.current[section.id] = el
+                    }
+                }}
+                onClick={() => scrollToSection(section.id)}
+                className={`transition-colors relative pb-1 ${
+                  activeSection === section.id ? 'text-stone-900' : 'text-stone-700 hover:text-stone-900'
+                }`}
+                style={section.id === 'samples' ? { } : {}}
+              >
+                {section.label}
+              </button>
+            ))}
+            <span
+              className="absolute bottom-0 h-[1px] bg-stone-900 transition-all duration-300 ease-in-out"
+              style={{
+                left: `${underlineStyle.left}px`,
+                width: `${underlineStyle.width}px`
+              }}
+            />
+          </div>
       </div>
     </nav>
   );

@@ -34,13 +34,13 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-stone-100 border-y border-stone-200">
+    <section id="experience" className="bg-stone-50">
       <div className="max-w-3xl mx-auto px-6 py-20">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Experience</h2>
           <div className="space-y-10">
             {experience.map((job, index) => (
-              <div key={index} className="border-l-2 border-stone-400 pl-6">
+              <div key={index}>
                 <h3 className="text-xl text-stone-900 font-serif mb-1">{job.title}</h3>
                 <p className="text-stone-600 italic mb-2">{job.organization}</p>
                 <p className="text-sm text-stone-500 mb-3">{job.period}</p>
@@ -54,7 +54,7 @@ export function Experience() {
           <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Education</h2>
           <div className="space-y-6">
             {education.map((edu, index) => (
-              <div key={index} className="border-l-2 border-stone-400 pl-6">
+              <div key={index}>
                 <h3 className="text-xl text-stone-900 font-serif mb-1">{edu.degree}</h3>
                 <p className="text-stone-600 italic">{edu.institution}</p>
                 <p className="text-sm text-stone-500 mt-1">{edu.year}</p>
