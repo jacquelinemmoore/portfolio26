@@ -23,7 +23,8 @@ export function WritingSamples() {
     {
       title: "Lightning Web Components: Mixed Shadow Mode (Beta)",
       description: "Content for a feature that lets developers native shadow DOM and synthetic shadow DOM in the same app.",
-      type: "Developer Guide"
+      type: "Developer Guide",
+      url: "https://developer.salesforce.com/docs/platform/lwc/guide/create-mixed-shadow.html"
     },
     {
       title: "Enable Third-Party Integrations with Light DOM (Beta)",
@@ -38,9 +39,11 @@ export function WritingSamples() {
       <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Writing Samples</h2>
       <div className="space-y-6">
         {samples.map((sample, index) => (
-          <div 
+          <a
             key={index}
-            className="border border-stone-200 bg-white p-6 hover:border-stone-400 transition-colors cursor-pointer"
+            className="border border-stone-200 bg-white p-6 hover:border-stone-400 transition-colors cursor-pointer block"
+            href={sample.url}
+            target="_blank"
           >
             <div className="flex items-start gap-4">
               <FileText className="w-6 h-6 text-stone-600 flex-shrink-0 mt-1" />
@@ -54,7 +57,7 @@ export function WritingSamples() {
                 <p className="text-stone-600 leading-relaxed">{sample.description}</p>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

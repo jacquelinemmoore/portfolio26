@@ -4,6 +4,7 @@ export function About() {
   return (
     <div id='about'>
       <Hero />
+      <hr />
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-3xl md:text-4xl mb-8 text-stone-900 font-serif">About</h2>
       <div className="prose prose-stone">

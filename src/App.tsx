@@ -8,11 +8,11 @@ export default function App() {
     <div className="min-h-screen bg-stone-50">
       <Navigation />
       <About />
-      <hr className="border-stone-200 max-w-3xl mx-auto"/>
+      <hr/>
       <Experience />
-      <hr className="border-stone-200 max-w-3xl mx-auto"/>
+      <hr/>
       <WritingSamples />
-      <hr className="border-stone-200 max-w-3xl mx-auto"/>
+      <hr/>
       <footer className="py-12 text-center text-stone-500 text-sm">
         <p>© 2026 All rights reserved.</p>
       </footer>

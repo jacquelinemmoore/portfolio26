@@ -1,6 +1,3 @@
-import { Linkedin } from 'lucide-react';
-
-
 export function Hero() {
   return (
     <section className="min-h-[60vh] flex items-center justify-center pt-20 ">
@@ -9,7 +6,7 @@ export function Hero() {
           <h1 className="text-6xl md:text-8xl mb-6 text-stone-900 tracking-tight font-weight-semi-bold">
             Jacqueline Moore
           </h1>
-          <p className="text-xl md:text-2xl text-stone-600 tracking-widest font-serif">
+          <p className="text-xl md:text-2xl text-stone-600 font-serif">
             Senior Technical Writer
           </p>
         </div>
@@ -21,9 +18,6 @@ export function Hero() {
           />
         </div>
       </div>
-        <div>
-            <Linkedin/>
-        </div>
     </section>
   );
 }

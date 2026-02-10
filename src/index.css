@@ -105,7 +105,9 @@
 
   hr {
     height: 0;
-    color: inherit;
+    color: var(--color-stone-200);
+    max-width: var(--container-3xl);
+    margin-inline: auto;
     border-top-width: 1px;
   }
 

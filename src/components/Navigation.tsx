@@ -70,7 +70,7 @@ export function Navigation() {
                     }
                 }}
                 onClick={() => scrollToSection(section.id)}
-                className={`transition-colors relative pb-1 ${
+                className={`transition-colors relative pb-1 cursor-pointer ${
                   activeSection === section.id ? 'text-stone-900' : 'text-stone-700 hover:text-stone-900'
                 }`}
                 style={section.id === 'samples' ? { } : {}}
