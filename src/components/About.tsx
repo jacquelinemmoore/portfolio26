@@ -11,7 +11,7 @@ export function About() {
           I write developer documentation for Salesforce, focusing on web components, APIs, and server-side rendering. My background in biomedical engineering and English from UC Davis informs how I translate technical complexity into clear content.
         </p>
         <p className="text-lg leading-relaxed text-stone-700 mt-6">
-          I'm based in San Francisco. Outside of writing, I play tennis, rock climb, and read. I also volunteer at Muttville, a local rescue for senior dogs.
+          Outside of writing, I play tennis, rock climb, and read. I also volunteer at Muttville, a rescue for senior dogs in San Francisco.
         </p>
       </div>
       </section>
