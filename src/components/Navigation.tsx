@@ -63,7 +63,11 @@ export function Navigation() {
         {sections.map((section) => (
           <button
             key={section.id}
-            ref={(el) => (linkRefs.current[section.id] = el)}
+            ref={(el) => {
+                if(el !== null) {
+                    linkRefs.current[section.id] = el
+                }
+            }}
             onClick={() => scrollToSection(section.id)}
             className={`transition-colors relative pb-1 ${
               activeSection === section.id ? 'text-stone-900' : 'text-stone-700 hover:text-stone-900'
