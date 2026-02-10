@@ -41,8 +41,8 @@ export function Experience() {
           <div className="space-y-10">
             {experience.map((job, index) => (
               <div key={index}>
-                <h3 className="text-xl text-stone-900 font-serif mb-1">{job.title}</h3>
-                <p className="text-stone-600 italic mb-2">{job.organization}</p>
+                <h3 className="text-xl text-stone-900 font-serif mb-1">{job.organization}</h3>
+                <p className="text-stone-600 italic mb-2">{job.title}</p>
                 <p className="text-sm text-stone-500 mb-3">{job.period}</p>
                 <p className="text-stone-700">{job.description}</p>
               </div>

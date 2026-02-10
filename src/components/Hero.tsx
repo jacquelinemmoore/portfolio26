@@ -10,7 +10,7 @@ export function Hero() {
             Senior Technical Writer
           </p>
         </div>
-        <div className="flex justify-center md:justify-end pr-8">
+        <div className="flex justify-center md:justify-end pr-8 pb-20">
           <img 
             src="/profile.jpg"
             alt="Portrait" 

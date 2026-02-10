@@ -29,7 +29,7 @@ export function WritingSamples() {
     {
       title: "Enable Third-Party Integrations with Light DOM (Beta)",
       description: "A release note on a complex new beta feature.",
-      type: "Release Notes",
+      type: "Release Note",
       url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_lwc_light_dom.htm&release=240&type=5"
     }
   ];

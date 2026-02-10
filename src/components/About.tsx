@@ -12,10 +12,10 @@ export function About() {
           I write developer documentation for Salesforce, focusing on web components, APIs, and server-side rendering. My background in biomedical engineering and English from UC Davis informs how I translate technical complexity into clear content.
         </p>
         <p className="text-lg leading-relaxed text-stone-700 mt-6">
-          Outside of writing, I play tennis, rock climb, and read. I also volunteer at Muttville, a rescue for senior dogs in San Francisco.
+          Outside of writing, I cycle, rock climb, and read. I also volunteer at Muttville, a rescue for senior dogs in San Francisco.
         </p>
         <p className="text-lg leading-relaxed text-stone-700 mt-6">
-          Contact me at <a href="mailto:jackymoore99@gmail.com" className="text-stone-700 hover:text-stone-900 underline">jackymoore99@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/jackymoore" className="text-stone-700 hover:text-stone-900 underline">LinkedIn</a>.
+          Contact me at <a href="mailto:jackymoore99@gmail.com" className="text-stone-700 hover:text-stone-900 underline">jackymoore99@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/jackymoore" className="text-stone-700 hover:text-stone-900 underline " target="_blank" rel="noopener noreferrer">LinkedIn</a>.
         </p>
       </div>
       </section>
