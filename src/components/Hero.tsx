@@ -2,7 +2,7 @@ import ProfilePhoto from '../assets/profile.jpg';
 
 export function Hero() {
   return (
-    <section className="min-h-[60vh] flex items-center justify-center pt-20 ">
+    <section className="min-h-[60vh] flex items-center justify-center pt-30 ">
       <div className="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="pl-8">
           <h1 className="text-4xl md:text-6xl mb-6 text-stone-900 tracking-tight font-weight-semi-bold">

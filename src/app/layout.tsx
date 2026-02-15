@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
   <html lang="en" className={ebGaramond.className}>
     <head>
-      <title>One Page Portfolio UI</title>
+      <title>Jacqueline Moore</title>
     </head>
 
     <body>

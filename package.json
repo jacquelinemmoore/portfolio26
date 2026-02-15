@@ -8,14 +8,14 @@
         "next": "^16.1.6",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
-        "tailwindcss": "^4.1.18"
+        "tailwindcss": "^4.1.18",
+        "@tailwindcss/postcss": "^4.1.18"
+
     },
     "devDependencies": {
         "@types/node": "^25.2.2",
         "@types/react": "^19.2.13",
-        "typescript": "5.9.3",
-        "@tailwindcss/postcss": "^4.1.18"
-
+        "typescript": "5.9.3"
     },
     "scripts": {
         "dev": "next dev",
