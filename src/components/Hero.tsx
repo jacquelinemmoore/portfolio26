@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ProfilePhoto from '../assets/profile.jpg';
 
 export function Hero() {
@@ -13,11 +14,15 @@ export function Hero() {
           </p>
         </div>
         <div className="flex justify-center md:justify-end pr-8 pb-20">
-          <img 
-            src={ProfilePhoto.src}
-            alt="Portrait" 
-            className="w-full max-w-sm h-auto object-cover"
-          />
+          <div className='aspect-3/4 w-full max-w-sm relative'>
+            <Image 
+              src={ProfilePhoto.src}
+              alt="Portrait" 
+              fetchPriority='high'
+              preload={true}
+              fill={true}
+            />
+          </div>
         </div>
       </div>
     </section>
