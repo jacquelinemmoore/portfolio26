@@ -3,32 +3,32 @@ import { FileText } from 'lucide-react';
 export function WritingSamples() {
   const samples = [
     {
-      title: "Server-Side Rendering (SSR) with Lightning Web Runtime",
-      description: "Comprehensive developer guide content for enabling SSR in Salesforce projects with step-by-step instructions and sample code.",
-      type: "Developer Guide",
-      url: "https://developer.salesforce.com/docs/platform/lwr/guide/lwr-ssr.html"
-    },
-    {
-      title: "Preview Components with Local Dev",
-      description: "Detailed documentation outlining the latest tools for local development.",
+      title: "Run a Live Component Preview",
+      description: "A page detailing CLI tools for locally previewing and iterating on React components and Lightning web components.",
       type: "Developer Guide",
       url: "https://developer.salesforce.com/docs/platform/lwc/guide/get-started-test-components.html"
     },
     {
-      title: "Use Lightning Experience Insights",
-      description: "A help page for Salesforce admins on how to use actionable insights to improve page performance.",
+      title: "Server-Side Rendering (SSR) with Lightning Web Runtime",
+      description: "A comprehensive developer guide section on how to enable SSR in Salesforce projects, with step-by-step instructions and sample code.",
+      type: "Developer Guide",
+      url: "https://developer.salesforce.com/docs/platform/lwr/guide/lwr-ssr.html"
+    },
+    {
+      title: "Lightning Experience Insights",
+      description: "A set of help pages for Salesforce admins on how to generate actionable insights for improving page performance.",
       type: "User Help",
       url: "https://help.salesforce.com/s/articleView?id=xcloud.lex_insights_report.htm&type=5"
     },
     {
-      title: "Lightning Web Components: Mixed Shadow Mode (Beta)",
-      description: "Content for a feature that lets developers native shadow DOM and synthetic shadow DOM in the same app.",
+      title: "Build Components in Mixed Shadow Mode (Beta)",
+      description: "A developer guide page for a feature that lets you use native shadow DOM and synthetic shadow DOM in the same app.",
       type: "Developer Guide",
       url: "https://developer.salesforce.com/docs/platform/lwc/guide/create-mixed-shadow.html"
     },
     {
       title: "Enable Third-Party Integrations with Light DOM (Beta)",
-      description: "A release note on a complex new beta feature.",
+      description: "A release note for the beta release of a new feature for Lightning Web Components engineers.",
       type: "Release Note",
       url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_lwc_light_dom.htm&release=240&type=5"
     }

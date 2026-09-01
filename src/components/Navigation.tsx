@@ -53,7 +53,8 @@ export function Navigation() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 100;
+      const navHeight = navRef.current?.offsetHeight || 100;
+      const offset = navHeight + 12;
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }

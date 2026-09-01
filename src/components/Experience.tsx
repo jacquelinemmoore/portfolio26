@@ -4,7 +4,7 @@ export function Experience() {
       title: "Senior Technical Writer",
       organization: "Salesforce",
       period: "2021 – Present",
-      description: "Lead documentation initiatives for engineering teams."
+      description: "Leading developer documentation initiatives for multiple engineering teams. Projects include Live Preview, Lightning Web Components, and Prompt Builder."
     },
     {
       title: "Technology Transfer Intern",
@@ -16,7 +16,7 @@ export function Experience() {
       title: "Project Manager",
       organization: "BioInnovation Group",
       period: "2019 – 2021",
-      description: "Co-led a team of 10 to construct microfluidic controllers and chips for biomedical research under Dr. Marc Facciotti."
+      description: "Co-led a team of 10 to construct microfluidic controllers and chips in Dr. Marc Facciotti's lab at UC Davis."
     }
   ];
 
