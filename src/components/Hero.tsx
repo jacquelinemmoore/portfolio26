@@ -17,7 +17,7 @@ export function Hero() {
           <div className='aspect-3/4 w-full max-w-sm relative'>
             <Image 
               src={ProfilePhoto.src}
-              alt="Portrait" 
+              alt="Jacqueline Moore, Senior Technical Writer" 
               fetchPriority='high'
               preload={true}
               fill={true}
