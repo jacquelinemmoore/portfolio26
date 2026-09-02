@@ -96,7 +96,7 @@ export function Navigation() {
   }, []);
 
   return (
-    <nav ref={containerRef} className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6 border-b border-stone-200">
+    <nav ref={containerRef} className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6">
       <div className="flex flex-row-reverse">
           <div ref={navRef} className="flex gap-6 md:gap-8 relative">
             {sections.map((section) => (

@@ -4,7 +4,7 @@ export function Experience() {
       title: "Senior Technical Writer",
       organization: "Salesforce",
       period: "2021 – Present",
-      description: "Leading developer documentation initiatives for multiple engineering teams. Projects include Live Preview, Lightning Web Components, and Prompt Builder."
+      description: "Lead documentation initiatives for engineering teams."
     },
     {
       title: "Technology Transfer Intern",
@@ -16,7 +16,7 @@ export function Experience() {
       title: "Project Manager",
       organization: "BioInnovation Group",
       period: "2019 – 2021",
-      description: "Co-led a team of 10 to construct microfluidic controllers and chips in Dr. Marc Facciotti's lab at UC Davis."
+      description: "Co-led a team of 10 to construct microfluidic controllers and chips for biomedical research under Dr. Marc Facciotti."
     }
   ];
 
@@ -41,8 +41,8 @@ export function Experience() {
           <div className="space-y-10">
             {experience.map((job, index) => (
               <div key={index}>
-                <h3 className="text-xl text-stone-900 font-serif mb-1">{job.organization}</h3>
-                <p className="text-stone-600 italic mb-2">{job.title}</p>
+                <h3 className="text-[14px] md:text-base text-stone-900 font-serif mb-1">{job.organization}</h3>
+                <p className="text-stone-600 italic mb-2 text-[14px] md:text-base">{job.title}</p>
                 <p className="text-sm text-stone-500 mb-3">{job.period}</p>
                 <p className="text-stone-700">{job.description}</p>
               </div>
@@ -55,8 +55,8 @@ export function Experience() {
           <div className="space-y-6">
             {education.map((edu, index) => (
               <div key={index}>
-                <h3 className="text-xl text-stone-900 font-serif mb-1">{edu.degree}</h3>
-                <p className="text-stone-600 italic">{edu.institution}</p>
+                <h3 className="text-[14px] md:text-base text-stone-900 font-serif mb-1">{edu.degree}</h3>
+                <p className="text-stone-600 italic text-[14px] md:text-base">{edu.institution}</p>
                 <p className="text-sm text-stone-500 mt-1">{edu.year}</p>
               </div>
             ))}
