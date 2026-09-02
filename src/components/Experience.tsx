@@ -41,9 +41,8 @@ export function Experience() {
           <div className="space-y-10">
             {experience.map((job, index) => (
               <div key={index}>
-                <h3 className="text-xl text-stone-900 mb-1">{job.organization}</h3>
+                <h3 className="text-xl text-stone-900 mb-1">{job.organization} ({job.period})</h3>
                 <p className="text-stone-600 italic mb-2 text-[14px] md:text-base">{job.title}</p>
-                <p className="text-sm text-stone-600 mb-2">{job.period}</p>
                 <p className="text-stone-600">{job.description}</p>
               </div>
             ))}
