@@ -14,10 +14,10 @@ export function Hero() {
           </p>
           <div className="text-sm md:text-base text-stone-700 leading-relaxed mb-6 space-y-4">
             <p>
-              I write developer documentation for Salesforce, focusing on web components, APIs, and server-side rendering. My background in biomedical engineering and English from UC Davis informs how I translate technical complexity into clear content.
+              I write developer documentation for Salesforce, focusing on engineering tools for AI-powered development. My background in biomedical engineering and English informs how I translate technical complexity into clear content.
             </p>
             <p>
-              Outside of writing, I cycle, rock climb, and read. I also like to cook.
+              Outside of writing, I like riding bikes, rock climbing, and reading. I also volunteer at Muttville, a senior dog shelter in San Francisco.
             </p>
           </div>
           <div className="flex items-center gap-3 text-[14px] md:text-base">

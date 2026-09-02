@@ -36,7 +36,7 @@ export function WritingSamples() {
 
   return (
     <section id="samples" className="max-w-3xl mx-auto px-6 py-20">
-      <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Writing Samples</h2>
+      <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Portfolio</h2>
       <div className="space-y-6">
         {samples.map((sample, index) => (
           <a

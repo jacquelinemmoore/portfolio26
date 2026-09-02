@@ -4,13 +4,13 @@ export function Experience() {
       title: "Senior Technical Writer",
       organization: "Salesforce",
       period: "2021 – Present",
-      description: "Lead documentation initiatives for engineering teams."
+      description: "Leading documentation initiatives (dev guides, release notes, UI text, and more) for engineering teams."
     },
     {
       title: "Technology Transfer Intern",
       organization: "InnovationAccess",
       period: "2021",
-      description: "Conducted prior art research, drafted freedom to operate analyses, and wrote non-confidential descriptions for patent applications."
+      description: "Conducted prior art research, then drafted freedom-to-operate analyses and non-confidential descriptions for patent applications."
     },
     {
       title: "Project Manager",

@@ -13,7 +13,7 @@ export function Navigation() {
   const sections = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
-    { id: 'samples', label: 'Samples' }
+    { id: 'samples', label: 'Portfolio' }
   ];
 
   useEffect(() => {
