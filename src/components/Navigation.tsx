@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState('about');
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
   const sections = [
@@ -50,33 +51,61 @@ export function Navigation() {
     }
   }, [activeSection]);
 
-  const scrollToSection = (id: string) => {
+  // Handle window resize to update underline position
+  useEffect(() => {
+    const handleResize = () => {
+      const activeLink = linkRefs.current[activeSection];
+      const nav = navRef.current;
+      
+      if (activeLink && nav) {
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+        
+        setUnderlineStyle({
+          left: linkRect.left - navRect.left,
+          width: linkRect.width
+        });
+      }
+    };
+
+    const resizeObserver = new ResizeObserver(handleResize);
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
+    return () => resizeObserver.disconnect();
+  }, [activeSection]);
+
+  const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
-    if (element) {
-      const navHeight = navRef.current?.offsetHeight || 100;
+    if (element && containerRef.current) {
+      const navHeight = containerRef.current.offsetHeight || 80;
       const offset = navHeight + 12;
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }
-  };
+  }, []);
+
+  const handleRefCallback = useCallback((section: string) => {
+    return (el: HTMLButtonElement | null) => {
+      if (el !== null) {
+        linkRefs.current[section] = el;
+      }
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6">
+    <nav ref={containerRef} className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6">
       <div className="flex flex-row-reverse">
           <div ref={navRef} className="flex gap-8 relative">
             {sections.map((section) => (
               <button
                 key={section.id}
-                ref={(el) => {
-                    if(el !== null) {
-                        linkRefs.current[section.id] = el
-                    }
-                }}
+                ref={handleRefCallback(section.id)}
                 onClick={() => scrollToSection(section.id)}
-                className={`transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === section.id ? 'text-stone-900' : 'text-stone-700 hover:text-stone-900'
+                className={`transition-colors relative pb-1 cursor-pointer text-sm md:text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900 ${
+                  activeSection === section.id ? 'text-stone-900' : 'text-stone-600 hover:text-stone-800'
                 }`}
-                style={section.id === 'samples' ? { } : {}}
               >
                 {section.label}
               </button>

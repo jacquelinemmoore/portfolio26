@@ -19,8 +19,10 @@ export function Hero() {
               src={ProfilePhoto.src}
               alt="Jacqueline Moore, Senior Technical Writer" 
               fetchPriority='high'
-              preload={true}
               fill={true}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
             />
           </div>
         </div>

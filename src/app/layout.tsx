@@ -16,9 +16,10 @@ export default function RootLayout({
   <html lang="en" className={ebGaramond.className}>
     <head>
       <title>Jacqueline Moore</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
 
-    <body>
+    <body style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
       <div id="root">
         {children}
       </div>
