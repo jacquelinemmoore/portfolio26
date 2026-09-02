@@ -41,21 +41,21 @@ export function WritingSamples() {
         {samples.map((sample, index) => (
           <a
             key={index}
-            className="border border-stone-200 bg-white p-6 hover:border-stone-400 transition-colors cursor-pointer block"
+            className="border border-stone-200 bg-white p-6 hover:border-stone-400 hover:shadow-sm transition-all cursor-pointer block group"
             href={sample.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="flex items-start gap-4">
-              <FileText className="w-6 h-6 text-stone-600 flex-shrink-0 mt-1" />
+              <FileText className="w-6 h-6 text-stone-600 flex-shrink-0 mt-1 group-hover:text-stone-900 transition-colors" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className="text-xl text-stone-900 font-serif">{sample.title}</h3>
+                  <h3 className="text-xl text-stone-900 font-serif group-hover:text-stone-800 transition-colors">{sample.title}</h3>
                   <span className="text-xs text-stone-500 uppercase tracking-wide whitespace-nowrap">
                     {sample.type}
                   </span>
                 </div>
-                <p className="text-stone-600 leading-relaxed">{sample.description}</p>
+                <p className="text-stone-600 leading-relaxed group-hover:text-stone-700 transition-colors">{sample.description}</p>
               </div>
             </div>
           </a>

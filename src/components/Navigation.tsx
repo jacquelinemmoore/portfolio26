@@ -8,6 +8,7 @@ export function Navigation() {
   const navRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const sections = [
     { id: 'about', label: 'About' },
@@ -36,7 +37,7 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  const updateUnderlinePosition = useCallback(() => {
     const activeLink = linkRefs.current[activeSection];
     const nav = navRef.current;
     
@@ -51,30 +52,30 @@ export function Navigation() {
     }
   }, [activeSection]);
 
-  // Handle window resize to update underline position
+  useEffect(() => {
+    updateUnderlinePosition();
+  }, [activeSection, updateUnderlinePosition]);
+
+  // Handle window resize to update underline position with debounce
   useEffect(() => {
     const handleResize = () => {
-      const activeLink = linkRefs.current[activeSection];
-      const nav = navRef.current;
-      
-      if (activeLink && nav) {
-        const navRect = nav.getBoundingClientRect();
-        const linkRect = activeLink.getBoundingClientRect();
-        
-        setUnderlineStyle({
-          left: linkRect.left - navRect.left,
-          width: linkRect.width
-        });
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
       }
+      resizeTimeoutRef.current = setTimeout(() => {
+        updateUnderlinePosition();
+      }, 100);
     };
 
-    const resizeObserver = new ResizeObserver(handleResize);
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
-    }
+    window.addEventListener('resize', handleResize);
 
-    return () => resizeObserver.disconnect();
-  }, [activeSection]);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
+      }
+    };
+  }, [updateUnderlinePosition]);
 
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
@@ -95,15 +96,15 @@ export function Navigation() {
   }, []);
 
   return (
-    <nav ref={containerRef} className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6">
+    <nav ref={containerRef} className="fixed top-0 right-0 left-0 bg-stone-50 z-50 pl-8 pr-10 pt-8 pb-6 border-b border-stone-200">
       <div className="flex flex-row-reverse">
-          <div ref={navRef} className="flex gap-8 relative">
+          <div ref={navRef} className="flex gap-6 md:gap-8 relative">
             {sections.map((section) => (
               <button
                 key={section.id}
                 ref={handleRefCallback(section.id)}
                 onClick={() => scrollToSection(section.id)}
-                className={`transition-colors relative pb-1 cursor-pointer text-sm md:text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900 ${
+                className={`transition-colors relative pb-2 md:pb-1 cursor-pointer text-sm md:text-base py-2 md:py-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900 ${
                   activeSection === section.id ? 'text-stone-900' : 'text-stone-600 hover:text-stone-800'
                 }`}
               >
