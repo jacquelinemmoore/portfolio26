@@ -36,7 +36,7 @@ export function WritingSamples() {
 
   return (
     <section id="samples" className="max-w-3xl mx-auto px-6 py-20">
-      <h2 className="text-3xl md:text-4xl mb-10 text-stone-900 font-serif">Portfolio</h2>
+      <h2 className="text-3xl md:text-4xl mb-10 text-stone-900">Portfolio</h2>
       <div className="space-y-6">
         {samples.map((sample, index) => (
           <a
@@ -50,7 +50,7 @@ export function WritingSamples() {
               <FileText className="w-6 h-6 text-stone-600 flex-shrink-0 mt-1 group-hover:text-stone-900 transition-colors" />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className="text-xl text-stone-900 font-serif group-hover:text-stone-800 transition-colors">{sample.title}</h3>
+                  <h3 className="text-xl text-stone-900 group-hover:text-stone-800 transition-colors">{sample.title}</h3>
                   <span className="text-xs text-stone-500 uppercase tracking-wide whitespace-nowrap">
                     {sample.type}
                   </span>
