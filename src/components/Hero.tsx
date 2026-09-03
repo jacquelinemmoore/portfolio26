@@ -9,7 +9,7 @@ export function Hero() {
           <h1 className="text-3xl md:text-5xl mb-3 leading-tight">
             Jacqueline Moore
           </h1>
-          <p className="text-xl mb-8">
+          <p className="font-accent text-l mb-8 uppercase tracking-wide">
             Senior Technical Writer
           </p>
           <div className="text-sm md:text-base leading-relaxed mb-6 space-y-4">
@@ -31,7 +31,7 @@ export function Hero() {
             </a>
             <span>/</span>
             <a 
-              href="https://github.com"
+              href="https://github.com/jacquelinemmoore"
               target="_blank"
               rel="noopener noreferrer"
               className="link-underline"

@@ -104,7 +104,7 @@ export function Navigation() {
                 key={section.id}
                 ref={handleRefCallback(section.id)}
                 onClick={() => scrollToSection(section.id)}
-                className="link-hover after:content-none relative pb-2 md:pb-1 cursor-pointer text-sm md:text-base py-2 md:py-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
+                className="link-hover after:content-none relative pb-2 md:pb-1 cursor-pointer text-sm py-2 md:py-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900 font-accent uppercase tracking-wide"
               >
                 {section.label}
               </button>

@@ -29,6 +29,11 @@
   .link-hover-group {
     @apply group-hover:text-stone-600 transition-colors;
   }
+  /* Public Sans accent, for short functional text (nav, tags, subtitle)
+     set against the EB Garamond body copy for contrast. */
+  .font-accent {
+    font-family: var(--font-public-sans), sans-serif;
+  }
 }
 
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */

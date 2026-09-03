@@ -4,7 +4,7 @@ export function Experience() {
       title: "Senior Technical Writer",
       organization: "Salesforce",
       period: "2021 – Present",
-      description: "Leading documentation initiatives (dev guides, release notes, UI text, and more) for engineering teams."
+      description: "Leading documentation initiatives (dev guides, UI text, release notes, and more) for engineering teams."
     },
     {
       title: "Technology Transfer Intern",

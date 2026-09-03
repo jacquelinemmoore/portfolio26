@@ -3,22 +3,22 @@ import { FileText } from 'lucide-react';
 export function WritingSamples() {
   const samples = [
     {
+      title: "Preview Components with Local Dev",
+      description: "Documentation outlining CLI tools for locally testing React components and Lightning web components.",
+      type: "Developer Guide",
+      url: "https://developer.salesforce.com/docs/platform/lwc/guide/get-started-test-components.html"
+    },
+    {
       title: "Server-Side Rendering (SSR) with Lightning Web Runtime",
       description: "Comprehensive developer guide content for enabling SSR in Salesforce projects with step-by-step instructions and sample code.",
       type: "Developer Guide",
       url: "https://developer.salesforce.com/docs/platform/lwr/guide/lwr-ssr.html"
     },
     {
-      title: "Preview Components with Local Dev",
-      description: "Detailed documentation outlining the latest tools for local development.",
-      type: "Developer Guide",
-      url: "https://developer.salesforce.com/docs/platform/lwc/guide/get-started-test-components.html"
-    },
-    {
-      title: "Use Lightning Experience Insights",
+      title: "Lightning Experience Insights",
       description: "A help page for Salesforce admins on how to use actionable insights to improve page performance.",
       type: "User Help",
-      url: "https://help.salesforce.com/s/articleView?id=xcloud.lex_insights_report.htm&type=5"
+      url: "https://help.salesforce.com/s/articleView?id=xcloud.lex_insights_overview.htm&type=5"
     },
     {
       title: "Lightning Web Components: Mixed Shadow Mode (Beta)",
@@ -52,7 +52,7 @@ export function WritingSamples() {
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4 mb-2">
                     <h3 className="text-xl link-hover-group">{sample.title}</h3>
-                    <span className="text-sm md:text-base uppercase tracking-wide whitespace-nowrap">
+                    <span className="font-accent text-sm uppercase tracking-wide whitespace-nowrap">
                       {sample.type}
                     </span>
                   </div>

@@ -1,10 +1,16 @@
 import '../styles/index.css';
 
-import { EB_Garamond } from 'next/font/google';
+import { EB_Garamond, Public_Sans } from 'next/font/google';
 
 const ebGaramond = EB_Garamond({
   subsets: ['latin'],
   display: 'swap',
+});
+
+const publicSans = Public_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-public-sans',
 });
 
 export default function RootLayout({
@@ -13,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-  <html lang="en" className={ebGaramond.className}>
+  <html lang="en" className={`${ebGaramond.className} ${publicSans.variable}`}>
     <head>
       <title>Jacqueline Moore</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
