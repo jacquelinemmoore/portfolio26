@@ -1,5 +1,36 @@
 @import "tailwindcss";
 
+/*
+  Shared styling hooks.
+  - Default text color is set once, globally (see --foreground below),
+    so components no longer need to repeat text-stone-900/600/700 etc.
+  - .section-container / .content-column reproduce the exact left
+    alignment used by the Hero text, so every section lines up with it.
+  - .link-hover is the one place hover color is defined, since color
+    should only ever change on link hover.
+*/
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  .content-column {
+    @apply pl-8 max-w-3xl;
+  }
+  .link-hover {
+    @apply relative transition-colors hover:text-stone-600 after:content-[''] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-current after:opacity-0 after:transition-opacity hover:after:opacity-100;
+  }
+  /* For inline body-copy links (easy to miss without a visible cue):
+     underline stays faintly visible at rest, and fills in on hover. */
+  .link-underline {
+    @apply relative transition-colors hover:text-stone-600 after:content-[''] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-current after:opacity-30 after:transition-opacity hover:after:opacity-100;
+  }
+  /* Same color hook, but for children of a `group` link (e.g. a whole
+     card is the <a>), so hovering anywhere on the card triggers it. */
+  .link-hover-group {
+    @apply group-hover:text-stone-600 transition-colors;
+  }
+}
+
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -47,6 +78,8 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --text-8xl: 6rem;
@@ -388,7 +421,10 @@
 :root {
   --font-size: 16px;
   --background: #fff;
-  --foreground: oklch(.145 0 0);
+  /* Foreground is pinned to stone-900 so every component inherits the
+     single default text color for free, instead of repeating
+     text-stone-900 everywhere. */
+  --foreground: oklch(.216 .006 56.043);
   --card: #fff;
   --card-foreground: oklch(.145 0 0);
   --popover: oklch(1 0 0);

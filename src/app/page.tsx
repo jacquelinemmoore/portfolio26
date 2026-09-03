@@ -15,7 +15,7 @@ export default function Page() {
       <hr/>
       <footer className="py-12 bg-stone-50">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-stone-500 text-xs text-center">
+          <p className="text-sm md:text-base text-center">
             © 2026 Jacqueline Moore. All rights reserved.
           </p>
         </div>

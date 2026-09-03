@@ -35,30 +35,31 @@ export function Experience() {
 
   return (
     <section id="experience" className="bg-stone-50">
-      <div className="max-w-3xl mx-auto px-6 py-20">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl mb-10 text-stone-900">Experience</h2>
-          <div className="space-y-10">
-            {experience.map((job, index) => (
-              <div key={index}>
-                <h3 className="text-xl text-stone-900 mb-1">{job.organization} ({job.period})</h3>
-                <p className="text-stone-600 italic mb-2 text-[14px] md:text-base">{job.title}</p>
-                <p className="text-stone-600">{job.description}</p>
-              </div>
-            ))}
+      <div className="section-container py-20">
+        <div className="content-column max-w-none pr-8">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl mb-10">Experience</h2>
+            <div className="space-y-10">
+              {experience.map((job, index) => (
+                <div key={index}>
+                  <h3 className="text-xl mb-1">{job.organization} ({job.period})</h3>
+                  <p className="italic mb-2 text-sm md:text-base">{job.title}</p>
+                  <p className="text-sm md:text-base">{job.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div>
-          <h2 className="text-3xl md:text-4xl mb-10 text-stone-900">Education</h2>
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div key={index}>
-                <h3 className="text-xl text-stone-900 font-serif mb-1">{edu.degree}</h3>
-                <p className="text-stone-600 italic text-[14px] md:text-base">{edu.institution}</p>
-                <p className="text-sm text-stone-600">{edu.year}</p>
-              </div>
-            ))}
+          <div>
+            <h2 className="text-3xl md:text-4xl mb-10">Education</h2>
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <div key={index}>
+                  <h3 className="text-xl mb-1">{edu.degree}</h3>
+                  <p className="italic text-sm md:text-base">{edu.institution}, {edu.year}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

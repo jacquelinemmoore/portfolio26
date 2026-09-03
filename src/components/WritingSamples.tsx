@@ -35,31 +35,33 @@ export function WritingSamples() {
   ];
 
   return (
-    <section id="samples" className="max-w-3xl mx-auto px-6 py-20">
-      <h2 className="text-3xl md:text-4xl mb-10 text-stone-900">Portfolio</h2>
-      <div className="space-y-6">
-        {samples.map((sample, index) => (
-          <a
-            key={index}
-            className="border border-stone-200 bg-white p-6 hover:border-stone-400 hover:shadow-sm transition-all cursor-pointer block group"
-            href={sample.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="flex items-start gap-4">
-              <FileText className="w-6 h-6 text-stone-600 flex-shrink-0 mt-1 group-hover:text-stone-900 transition-colors" />
-              <div className="flex-1">
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className="text-xl text-stone-900 group-hover:text-stone-800 transition-colors">{sample.title}</h3>
-                  <span className="text-xs text-stone-500 uppercase tracking-wide whitespace-nowrap">
-                    {sample.type}
-                  </span>
+    <section id="samples" className="section-container py-20">
+      <div className="content-column max-w-none pr-8">
+        <h2 className="text-3xl md:text-4xl mb-10">Portfolio</h2>
+        <div className="space-y-6">
+          {samples.map((sample, index) => (
+            <a
+              key={index}
+              className="border border-stone-200 bg-white p-6 hover:border-stone-400 hover:shadow-sm transition-all cursor-pointer block group"
+              href={sample.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-start gap-4">
+                <FileText className="w-6 h-6 flex-shrink-0 mt-1 link-hover-group" />
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <h3 className="text-xl link-hover-group">{sample.title}</h3>
+                    <span className="text-sm md:text-base uppercase tracking-wide whitespace-nowrap">
+                      {sample.type}
+                    </span>
+                  </div>
+                  <p className="text-sm md:text-base leading-relaxed link-hover-group">{sample.description}</p>
                 </div>
-                <p className="text-stone-600 leading-relaxed group-hover:text-stone-700 transition-colors">{sample.description}</p>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

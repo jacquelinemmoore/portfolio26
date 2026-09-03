@@ -13,7 +13,7 @@ export default function App() {
       <hr/>
       <WritingSamples />
       <hr/>
-      <footer className="py-12 text-center text-stone-500 text-sm">
+      <footer className="py-12 text-center text-sm md:text-base">
         <p>© 2026 All rights reserved.</p>
       </footer>
     </div>
