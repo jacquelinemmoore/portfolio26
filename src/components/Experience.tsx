@@ -4,7 +4,7 @@ export function Experience() {
       title: "Senior Technical Writer",
       organization: "Salesforce",
       period: "2021 – Present",
-      description: "Leading documentation initiatives (dev guides, UI text, release notes, and more) for engineering teams."
+      description: "Leading documentation initiatives (dev guides, release notes, UI text, and more) for engineering teams."
     },
     {
       title: "Technology Transfer Intern",
@@ -22,12 +22,12 @@ export function Experience() {
 
   const education = [
     {
-      degree: "B.S. Biomedical Engineering",
+      degree: "Bachelor of Science, Biomedical Engineering",
       institution: "University of California, Davis",
       year: "2021"
     },
     {
-      degree: "B.A. English",
+      degree: "Bachelor of Arts, English",
       institution: "University of California, Davis",
       year: "2021"
     }
@@ -36,15 +36,17 @@ export function Experience() {
   return (
     <section id="experience" className="bg-stone-50">
       <div className="section-container py-20">
-        <div className="content-column max-w-none pr-8">
+        <div className="content-column">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl mb-10">Experience</h2>
             <div className="space-y-10">
               {experience.map((job, index) => (
                 <div key={index}>
                   <h3 className="text-xl mb-1">{job.organization} ({job.period})</h3>
-                  <p className="italic mb-2 text-sm md:text-base">{job.title}</p>
-                  <p className="text-sm md:text-base">{job.description}</p>
+                  <div className="pl-5">
+                    <p className="italic mb-2 text-sm md:text-base">{job.title}</p>
+                    <p className="text-sm md:text-base">{job.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -56,7 +58,9 @@ export function Experience() {
               {education.map((edu, index) => (
                 <div key={index}>
                   <h3 className="text-xl mb-1">{edu.degree}</h3>
-                  <p className="italic text-sm md:text-base">{edu.institution}, {edu.year}</p>
+                  <div className="pl-5">
+                    <p className="italic text-sm md:text-base">{edu.institution}</p>
+                  </div>
                 </div>
               ))}
             </div>
